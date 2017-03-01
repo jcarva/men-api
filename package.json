@@ -2,10 +2,10 @@
   "name": "mern-server",
   "version": "1.0.0",
   "description": "Server-side to a MERN stack application",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "engines": {
     "node": "6.2.2",
