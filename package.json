@@ -4,6 +4,7 @@
   "description": "Server-side to a MERN stack application",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/* --ext .js",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
@@ -32,6 +33,10 @@
     "morgan": "^1.8.1"
   },
   "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.0.1",
     "nodemon": "^1.11.0"
   }
 }
