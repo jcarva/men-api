@@ -12,7 +12,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 
 // Router Setup
-const router = require('./router');
+const router = require('./routes');
 router(app);
 
 // Server Setup
