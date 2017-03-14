@@ -1,12 +1,12 @@
 {
-  "name": "mern-server",
+  "name": "men-api",
   "version": "1.0.0",
-  "description": "Server-side to a MERN stack application",
+  "description": "Generic API using MongoDB, Express and Node.js",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/* --ext .js",
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "nodemon src/bin/www",
+    "start": "node src/bin/www"
   },
   "engines": {
     "node": "6.2.2",
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcarva/mern-server.git"
+    "url": "git+https://github.com/jcarva/men-api.git"
   },
   "keywords": [
-    "MERN",
-    "server"
+    "MEN",
+    "API"
   ],
   "author": "Jaelson Carvalho <jaelsoncarvalhojr@gmail.com> (https://github.com/jcarva)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/jcarva/mern-server/issues"
+    "url": "https://github.com/jcarva/men-api/issues"
   },
-  "homepage": "https://github.com/jcarva/mern-server#readme",
+  "homepage": "https://github.com/jcarva/men-api#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.16.1",
