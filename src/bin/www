@@ -2,6 +2,7 @@
 
 const app = require('../app');
 const http = require('http');
+var debug = require('debug')('men-api');
 
 // Server setup
 const port = normalizePort(process.env.PORT || '3030');
@@ -61,5 +62,6 @@ function onListening () {
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
+  debug('==> Development');
   console.info('==> Listening on %s. Visit http://localhost:%s in your browser.', bind, port);
 }
