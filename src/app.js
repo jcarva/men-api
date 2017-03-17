@@ -1,9 +1,13 @@
+// Environment Setup
+const environment = require('./config/environment');
+
+// Module dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-// DB Setup
-const db = require('./config/database');
+// DataBase Setup
+const database = require('./config/database');
 
 // App Setup
 const app = express();
