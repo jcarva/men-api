@@ -16,8 +16,31 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2/)
 * [Node.js](https://nodejs.org) (v6.2.2)
 * [npm](https://www.npmjs.com/) (3.9.5)
 * [Express.js](http://expressjs.com) (4.14.1)
+* [Passport](http://passportjs.org/) modules as authentication middlewares
+* [jwt-simple](https://github.com/hokaccha/node-jwt-simple) (0.5.1) to JWT(JSON Web Token) strategies
+* [bcrypt](https://github.com/kelektiv/node.bcrypt.js) (0.0.3)
 * [MongoDB](https://docs.mongodb.com) (v3.4.2)
 * [Mongoose](http://mongoosejs.com) (4.8.5)
+
+---
+
+## End points
+
+### Auth ###
+| Method |          URL          |         Description         |
+|:------:|:---------------------:|:---------------------------:|
+| `POST` | /api/auth/signup      | SignUp user                 |
+| `POSt` | /api/auth/signin      | SignIn user                 |
+
+
+### Protected Resources ###
+| Method |          URL          |         Description         |
+|:------:|:---------------------:|:---------------------------:|
+|  ALL   |           *           |   Access to any resource    |          |
+
+```
+Note: To access any protected resource is necessary to send the received token in the http header named `authorization`.
+```
 
 ---
 
