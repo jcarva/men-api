@@ -34,6 +34,22 @@ userSchema.pre('save', function (next) {
   });
 });
 
+// Method to check if the received password match with the user
+userSchema.methods.verifyPassword = function (submitedPassword, callback) {
+  // Get access to the user model
+  const user = this;
+
+  // Compare the user password and the submited password
+  bcrypt.compare(submitedPassword, user.password, function (err, isMatch) {
+    if (err) {
+      return callback(err);
+    }
+
+    callback(null, isMatch)
+  })
+
+};
+
 // Model Class Creation
 const userModelClass = mongoose.model('User', userSchema);
 
