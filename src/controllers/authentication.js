@@ -2,7 +2,7 @@
 const User = require('../models/user');
 
 // Token generator helper
-const { tokenGenerator } = require('../helpers/authentication');
+const {tokenGenerator} = require('../helpers/authentication');
 
 exports.signIn = function (req, res, next) {
   // Gotten user from local strategy in passport configuration

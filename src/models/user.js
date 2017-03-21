@@ -45,9 +45,8 @@ userSchema.methods.verifyPassword = function (submitedPassword, callback) {
       return callback(err);
     }
 
-    callback(null, isMatch)
-  })
-
+    callback(null, isMatch);
+  });
 };
 
 // Model Class Creation

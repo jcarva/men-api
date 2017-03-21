@@ -8,7 +8,7 @@ const LocalStrategy = require('passport-local');
 const User = require('../models/user');
 
 // JWT configuration
-const { jwtConfig } = require('../config/authentication');
+const {jwtConfig} = require('../config/authentication');
 
 // Setup options for JWT Strategy
 const jwtOptions = {
@@ -18,16 +18,16 @@ const jwtOptions = {
 
 // JWT Strategy
 const jwtSignIn = new JwtStrategy(jwtOptions, function (payload, done) {
-  //Check if the user_id extracted from the payload exists in the DB
+  // Check if the user_id extracted from the payload exists in the DB
   User.findById(payload.sub, function (err, user) {
     if (err) {
       return done(err);
     }
 
     if (user) {
-      done(null, user)
+      done(null, user);
     } else {
-      done(null, false)
+      done(null, false);
     }
   });
 });
@@ -35,9 +35,9 @@ const jwtSignIn = new JwtStrategy(jwtOptions, function (payload, done) {
 // Setup options for local Strategy
 const localOptions = {usernameField: 'email'};
 
-//Local Strategy
+// Local Strategy
 const localSignIn = new LocalStrategy(localOptions, function (email, password, done) {
-  //Check if the received email and password exist in the DB
+  // Check if the received email and password exist in the DB
   User.findOne({email}, function (err, user) {
     if (err) {
       return done(err);
@@ -57,7 +57,7 @@ const localSignIn = new LocalStrategy(localOptions, function (email, password, d
       }
       // The 'done' callback function passes the user to the 'req' object.
       return done(null, user);
-    })
+    });
   });
 });
 
@@ -67,5 +67,5 @@ passport.use(jwtSignIn);
 // Use Local Strategy in the Passport
 passport.use(localSignIn);
 
-//Export configured Passport
+// Export configured Passport
 module.exports = passport;
