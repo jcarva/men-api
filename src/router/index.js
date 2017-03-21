@@ -6,7 +6,7 @@ const AuthenticationRoutes = require('./authentication');
 
 // Router
 module.exports = function (app) {
-  AuthenticationRoutes(app);
+  app.use('/api/auth', AuthenticationRoutes);
   // Protected resources
   app.use('*', jwtAuthentication, function (req, res) {
     res.send({Authentication: 'Sucess'});
