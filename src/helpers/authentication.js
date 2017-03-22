@@ -2,7 +2,7 @@
 const jwt = require('jwt-simple');
 const {jwtConfig} = require('../config/authentication');
 const passport = require('passport');
-const passportConfig = require('../config/passport');
+require('../config/passport');
 
 // Token generator to JWT authentication strategy
 exports.tokenGenerator = (user) => {
@@ -10,8 +10,8 @@ exports.tokenGenerator = (user) => {
   return jwt.encode({sub: user.id, iat: timestamp}, jwtConfig.secret, 'HS512');
 };
 
-// JWT 'Middleware Authentication' that intercepts the incoming requests and check if exists valid local authenticated token
+// JWT 'Authentication Middleware' intercepts incoming requests and check if exists valid local authenticated token
 exports.jwtAuthentication = passport.authenticate('jwt', jwtConfig.session);
 
-// Local 'Middleware Authentication' that verify the received email and password to SignIn
+// Local 'Authentication Middleware' that verifies the received email and password to SignIn
 exports.localAuthentication = passport.authenticate('local', jwtConfig.session);

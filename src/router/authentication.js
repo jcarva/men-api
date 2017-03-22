@@ -1,5 +1,5 @@
 // Authentication Router
-var authentication_router = require('express').Router();
+var authenticationRouter = require('express').Router();
 
 // Local 'Middleware Authentication' helper
 const {localAuthentication} = require('../helpers/authentication');
@@ -7,10 +7,10 @@ const {localAuthentication} = require('../helpers/authentication');
 // Authentication Controller
 const AuthenticationController = require('../controllers/authentication');
 
-authentication_router
+authenticationRouter
   // Authentication Routes
   .post('/signup', AuthenticationController.signUp)
   .post('/signin', localAuthentication, AuthenticationController.signIn);
 
-
-module.exports = authentication_router;
+// Export configured Authentication Router
+module.exports = authenticationRouter;

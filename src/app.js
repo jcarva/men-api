@@ -1,5 +1,5 @@
 // Environment Setup
-const environment = require('./config/environment');
+require('./config/environment');
 
 // Module dependencies
 const express = require('express');
@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 // DataBase Setup
-const database = require('./config/database');
+require('./config/database');
 
 // App Setup
 const app = express();
@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 
 // Router Setup
-const router = require('./router')(app);
+require('./router')(app);
 
 // Error handler response
 app.use(function (err, req, res, next) {
@@ -69,4 +69,5 @@ app.use(function (err, req, res) {
   });
 });
 
+// Export configured App
 module.exports = app;

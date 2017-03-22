@@ -18,7 +18,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2/)
 * [Express.js](http://expressjs.com) (4.14.1)
 * [Passport](http://passportjs.org/) modules as authentication middlewares
 * [jwt-simple](https://github.com/hokaccha/node-jwt-simple) (0.5.1) to JWT(JSON Web Token) strategies
-* [bcrypt](https://github.com/kelektiv/node.bcrypt.js) (0.0.3)
+* [bcrypt](https://github.com/kelektiv/node.bcrypt.js) (0.0.3) to hash passwords
 * [MongoDB](https://docs.mongodb.com) (v3.4.2)
 * [Mongoose](http://mongoosejs.com) (4.8.5)
 
