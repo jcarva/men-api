@@ -7,6 +7,10 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2/)
 
 # MEN API
 
+[![Code Climate](https://codeclimate.com/github/jcarva/men-api/badges/gpa.svg)](https://codeclimate.com/github/jcarva/men-api)
+[![Test Coverage](https://codeclimate.com/github/jcarva/men-api/badges/coverage.svg)](https://codeclimate.com/github/jcarva/men-api/coverage)
+[![Issue Count](https://codeclimate.com/github/jcarva/men-api/badges/issue_count.svg)](https://codeclimate.com/github/jcarva/men-api)
+
  Generic API using MongoDB, Express and Node.js.
 
 ---
